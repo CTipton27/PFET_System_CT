@@ -1,0 +1,4 @@
+domain_path: C:\Users\ychna\xilinx_vivado\PFET_System_v1.0\pfet_freertos_platform\zynq_fsbl\zynq_fsbl_bsp
+app_src_dir: C:\Xilinx\Vitis\2024.2\data\embeddedsw\lib\sw_apps\zynq_fsbl
+template: zynq_fsbl
+lang: c

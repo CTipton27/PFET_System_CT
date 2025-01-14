@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2.1 (64-bit)
+# SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
+# IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+# SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+# Start of session at: Mon Jan 13 22:32:37 2025
+# Process ID         : 34380
+# Current directory  : C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.runs/impl_1
+# Command line       : vivado.exe -log pfet_system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source pfet_system_wrapper.tcl -notrace
+# Log file           : C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.runs/impl_1/pfet_system_wrapper.vdi
+# Journal file       : C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.runs/impl_1\vivado.jou
+# Running On         : Jupiter
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i9-12900H
+# CPU Frequency      : 2918 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 68369 MB
+# Swap memory        : 10200 MB
+# Total Virtual      : 78569 MB
+# Available Virtual  : 51135 MB
+#-----------------------------------------------------------
+source pfet_system_wrapper.tcl -notrace
