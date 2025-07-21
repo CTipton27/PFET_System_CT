@@ -125,7 +125,7 @@ module pfet_system_axi_smc_0 (
   input bit [1 : 0] M00_AXI_rresp,
   input bit_as_bool M00_AXI_rvalid,
   output bit_as_bool M00_AXI_rready,
-  output bit [4 : 0] M01_AXI_awaddr,
+  output bit [9 : 0] M01_AXI_awaddr,
   output bit [2 : 0] M01_AXI_awprot,
   output bit_as_bool M01_AXI_awvalid,
   input bit_as_bool M01_AXI_awready,
@@ -136,7 +136,7 @@ module pfet_system_axi_smc_0 (
   input bit [1 : 0] M01_AXI_bresp,
   input bit_as_bool M01_AXI_bvalid,
   output bit_as_bool M01_AXI_bready,
-  output bit [4 : 0] M01_AXI_araddr,
+  output bit [9 : 0] M01_AXI_araddr,
   output bit [2 : 0] M01_AXI_arprot,
   output bit_as_bool M01_AXI_arvalid,
   input bit_as_bool M01_AXI_arready,
@@ -144,58 +144,51 @@ module pfet_system_axi_smc_0 (
   input bit [1 : 0] M01_AXI_rresp,
   input bit_as_bool M01_AXI_rvalid,
   output bit_as_bool M01_AXI_rready,
-  output bit_as_bool M02_AXI_awid,
-  output bit_as_bool M02_AXI_awaddr,
-  output bit_as_bool M02_AXI_awlen,
-  output bit [2 : 0] M02_AXI_awsize,
-  output bit [1 : 0] M02_AXI_awburst,
-  output bit_as_bool M02_AXI_awlock,
-  output bit [3 : 0] M02_AXI_awcache,
+  output bit [10 : 0] M02_AXI_awaddr,
   output bit [2 : 0] M02_AXI_awprot,
-  output bit [3 : 0] M02_AXI_awregion,
-  output bit [3 : 0] M02_AXI_awqos,
-  output bit_as_bool M02_AXI_awuser,
-  output bit [0 : 0] M02_AXI_awvalid,
-  input bit [0 : 0] M02_AXI_awready,
-  output bit_as_bool M02_AXI_wid,
-  output bit_as_bool M02_AXI_wdata,
-  output bit_as_bool M02_AXI_wstrb,
-  output bit [0 : 0] M02_AXI_wlast,
-  output bit_as_bool M02_AXI_wuser,
-  output bit [0 : 0] M02_AXI_wvalid,
-  input bit [0 : 0] M02_AXI_wready,
-  input bit_as_bool M02_AXI_bid,
+  output bit_as_bool M02_AXI_awvalid,
+  input bit_as_bool M02_AXI_awready,
+  output bit [31 : 0] M02_AXI_wdata,
+  output bit [3 : 0] M02_AXI_wstrb,
+  output bit_as_bool M02_AXI_wvalid,
+  input bit_as_bool M02_AXI_wready,
   input bit [1 : 0] M02_AXI_bresp,
-  input bit_as_bool M02_AXI_buser,
-  input bit [0 : 0] M02_AXI_bvalid,
-  output bit [0 : 0] M02_AXI_bready,
-  output bit_as_bool M02_AXI_arid,
-  output bit_as_bool M02_AXI_araddr,
-  output bit_as_bool M02_AXI_arlen,
-  output bit [2 : 0] M02_AXI_arsize,
-  output bit [1 : 0] M02_AXI_arburst,
-  output bit_as_bool M02_AXI_arlock,
-  output bit [3 : 0] M02_AXI_arcache,
+  input bit_as_bool M02_AXI_bvalid,
+  output bit_as_bool M02_AXI_bready,
+  output bit [10 : 0] M02_AXI_araddr,
   output bit [2 : 0] M02_AXI_arprot,
-  output bit [3 : 0] M02_AXI_arregion,
-  output bit [3 : 0] M02_AXI_arqos,
-  output bit_as_bool M02_AXI_aruser,
-  output bit [0 : 0] M02_AXI_arvalid,
-  input bit [0 : 0] M02_AXI_arready,
-  input bit_as_bool M02_AXI_rid,
-  input bit_as_bool M02_AXI_rdata,
+  output bit_as_bool M02_AXI_arvalid,
+  input bit_as_bool M02_AXI_arready,
+  input bit [31 : 0] M02_AXI_rdata,
   input bit [1 : 0] M02_AXI_rresp,
-  input bit [0 : 0] M02_AXI_rlast,
-  input bit_as_bool M02_AXI_ruser,
-  input bit [0 : 0] M02_AXI_rvalid,
-  output bit [0 : 0] M02_AXI_rready
+  input bit_as_bool M02_AXI_rvalid,
+  output bit_as_bool M02_AXI_rready,
+  output bit [8 : 0] M03_AXI_awaddr,
+  output bit [2 : 0] M03_AXI_awprot,
+  output bit_as_bool M03_AXI_awvalid,
+  input bit_as_bool M03_AXI_awready,
+  output bit [31 : 0] M03_AXI_wdata,
+  output bit [3 : 0] M03_AXI_wstrb,
+  output bit_as_bool M03_AXI_wvalid,
+  input bit_as_bool M03_AXI_wready,
+  input bit [1 : 0] M03_AXI_bresp,
+  input bit_as_bool M03_AXI_bvalid,
+  output bit_as_bool M03_AXI_bready,
+  output bit [8 : 0] M03_AXI_araddr,
+  output bit [2 : 0] M03_AXI_arprot,
+  output bit_as_bool M03_AXI_arvalid,
+  input bit_as_bool M03_AXI_arready,
+  input bit [31 : 0] M03_AXI_rdata,
+  input bit [1 : 0] M03_AXI_rresp,
+  input bit_as_bool M03_AXI_rvalid,
+  output bit_as_bool M03_AXI_rready
 );
 endmodule
 `endif
 
 `ifdef XCELIUM
 (* XMSC_MODULE_EXPORT *)
-module pfet_system_axi_smc_0 (aclk,aresetn,S00_AXI_awid,S00_AXI_awaddr,S00_AXI_awlen,S00_AXI_awsize,S00_AXI_awburst,S00_AXI_awlock,S00_AXI_awcache,S00_AXI_awprot,S00_AXI_awqos,S00_AXI_awvalid,S00_AXI_awready,S00_AXI_wid,S00_AXI_wdata,S00_AXI_wstrb,S00_AXI_wlast,S00_AXI_wvalid,S00_AXI_wready,S00_AXI_bid,S00_AXI_bresp,S00_AXI_bvalid,S00_AXI_bready,S00_AXI_arid,S00_AXI_araddr,S00_AXI_arlen,S00_AXI_arsize,S00_AXI_arburst,S00_AXI_arlock,S00_AXI_arcache,S00_AXI_arprot,S00_AXI_arqos,S00_AXI_arvalid,S00_AXI_arready,S00_AXI_rid,S00_AXI_rdata,S00_AXI_rresp,S00_AXI_rlast,S00_AXI_rvalid,S00_AXI_rready,M00_AXI_awaddr,M00_AXI_awprot,M00_AXI_awvalid,M00_AXI_awready,M00_AXI_wdata,M00_AXI_wstrb,M00_AXI_wvalid,M00_AXI_wready,M00_AXI_bresp,M00_AXI_bvalid,M00_AXI_bready,M00_AXI_araddr,M00_AXI_arprot,M00_AXI_arvalid,M00_AXI_arready,M00_AXI_rdata,M00_AXI_rresp,M00_AXI_rvalid,M00_AXI_rready,M01_AXI_awaddr,M01_AXI_awprot,M01_AXI_awvalid,M01_AXI_awready,M01_AXI_wdata,M01_AXI_wstrb,M01_AXI_wvalid,M01_AXI_wready,M01_AXI_bresp,M01_AXI_bvalid,M01_AXI_bready,M01_AXI_araddr,M01_AXI_arprot,M01_AXI_arvalid,M01_AXI_arready,M01_AXI_rdata,M01_AXI_rresp,M01_AXI_rvalid,M01_AXI_rready,M02_AXI_awid,M02_AXI_awaddr,M02_AXI_awlen,M02_AXI_awsize,M02_AXI_awburst,M02_AXI_awlock,M02_AXI_awcache,M02_AXI_awprot,M02_AXI_awregion,M02_AXI_awqos,M02_AXI_awuser,M02_AXI_awvalid,M02_AXI_awready,M02_AXI_wid,M02_AXI_wdata,M02_AXI_wstrb,M02_AXI_wlast,M02_AXI_wuser,M02_AXI_wvalid,M02_AXI_wready,M02_AXI_bid,M02_AXI_bresp,M02_AXI_buser,M02_AXI_bvalid,M02_AXI_bready,M02_AXI_arid,M02_AXI_araddr,M02_AXI_arlen,M02_AXI_arsize,M02_AXI_arburst,M02_AXI_arlock,M02_AXI_arcache,M02_AXI_arprot,M02_AXI_arregion,M02_AXI_arqos,M02_AXI_aruser,M02_AXI_arvalid,M02_AXI_arready,M02_AXI_rid,M02_AXI_rdata,M02_AXI_rresp,M02_AXI_rlast,M02_AXI_ruser,M02_AXI_rvalid,M02_AXI_rready)
+module pfet_system_axi_smc_0 (aclk,aresetn,S00_AXI_awid,S00_AXI_awaddr,S00_AXI_awlen,S00_AXI_awsize,S00_AXI_awburst,S00_AXI_awlock,S00_AXI_awcache,S00_AXI_awprot,S00_AXI_awqos,S00_AXI_awvalid,S00_AXI_awready,S00_AXI_wid,S00_AXI_wdata,S00_AXI_wstrb,S00_AXI_wlast,S00_AXI_wvalid,S00_AXI_wready,S00_AXI_bid,S00_AXI_bresp,S00_AXI_bvalid,S00_AXI_bready,S00_AXI_arid,S00_AXI_araddr,S00_AXI_arlen,S00_AXI_arsize,S00_AXI_arburst,S00_AXI_arlock,S00_AXI_arcache,S00_AXI_arprot,S00_AXI_arqos,S00_AXI_arvalid,S00_AXI_arready,S00_AXI_rid,S00_AXI_rdata,S00_AXI_rresp,S00_AXI_rlast,S00_AXI_rvalid,S00_AXI_rready,M00_AXI_awaddr,M00_AXI_awprot,M00_AXI_awvalid,M00_AXI_awready,M00_AXI_wdata,M00_AXI_wstrb,M00_AXI_wvalid,M00_AXI_wready,M00_AXI_bresp,M00_AXI_bvalid,M00_AXI_bready,M00_AXI_araddr,M00_AXI_arprot,M00_AXI_arvalid,M00_AXI_arready,M00_AXI_rdata,M00_AXI_rresp,M00_AXI_rvalid,M00_AXI_rready,M01_AXI_awaddr,M01_AXI_awprot,M01_AXI_awvalid,M01_AXI_awready,M01_AXI_wdata,M01_AXI_wstrb,M01_AXI_wvalid,M01_AXI_wready,M01_AXI_bresp,M01_AXI_bvalid,M01_AXI_bready,M01_AXI_araddr,M01_AXI_arprot,M01_AXI_arvalid,M01_AXI_arready,M01_AXI_rdata,M01_AXI_rresp,M01_AXI_rvalid,M01_AXI_rready,M02_AXI_awaddr,M02_AXI_awprot,M02_AXI_awvalid,M02_AXI_awready,M02_AXI_wdata,M02_AXI_wstrb,M02_AXI_wvalid,M02_AXI_wready,M02_AXI_bresp,M02_AXI_bvalid,M02_AXI_bready,M02_AXI_araddr,M02_AXI_arprot,M02_AXI_arvalid,M02_AXI_arready,M02_AXI_rdata,M02_AXI_rresp,M02_AXI_rvalid,M02_AXI_rready,M03_AXI_awaddr,M03_AXI_awprot,M03_AXI_awvalid,M03_AXI_awready,M03_AXI_wdata,M03_AXI_wstrb,M03_AXI_wvalid,M03_AXI_wready,M03_AXI_bresp,M03_AXI_bvalid,M03_AXI_bready,M03_AXI_araddr,M03_AXI_arprot,M03_AXI_arvalid,M03_AXI_arready,M03_AXI_rdata,M03_AXI_rresp,M03_AXI_rvalid,M03_AXI_rready)
 (* integer foreign = "SystemC";
 *);
   input bit aclk;
@@ -257,7 +250,7 @@ module pfet_system_axi_smc_0 (aclk,aresetn,S00_AXI_awid,S00_AXI_awaddr,S00_AXI_a
   input bit [1 : 0] M00_AXI_rresp;
   input bit M00_AXI_rvalid;
   output wire M00_AXI_rready;
-  output wire [4 : 0] M01_AXI_awaddr;
+  output wire [9 : 0] M01_AXI_awaddr;
   output wire [2 : 0] M01_AXI_awprot;
   output wire M01_AXI_awvalid;
   input bit M01_AXI_awready;
@@ -268,7 +261,7 @@ module pfet_system_axi_smc_0 (aclk,aresetn,S00_AXI_awid,S00_AXI_awaddr,S00_AXI_a
   input bit [1 : 0] M01_AXI_bresp;
   input bit M01_AXI_bvalid;
   output wire M01_AXI_bready;
-  output wire [4 : 0] M01_AXI_araddr;
+  output wire [9 : 0] M01_AXI_araddr;
   output wire [2 : 0] M01_AXI_arprot;
   output wire M01_AXI_arvalid;
   input bit M01_AXI_arready;
@@ -276,50 +269,43 @@ module pfet_system_axi_smc_0 (aclk,aresetn,S00_AXI_awid,S00_AXI_awaddr,S00_AXI_a
   input bit [1 : 0] M01_AXI_rresp;
   input bit M01_AXI_rvalid;
   output wire M01_AXI_rready;
-  output wire M02_AXI_awid;
-  output wire M02_AXI_awaddr;
-  output wire M02_AXI_awlen;
-  output wire [2 : 0] M02_AXI_awsize;
-  output wire [1 : 0] M02_AXI_awburst;
-  output wire M02_AXI_awlock;
-  output wire [3 : 0] M02_AXI_awcache;
+  output wire [10 : 0] M02_AXI_awaddr;
   output wire [2 : 0] M02_AXI_awprot;
-  output wire [3 : 0] M02_AXI_awregion;
-  output wire [3 : 0] M02_AXI_awqos;
-  output wire M02_AXI_awuser;
-  output wire [0 : 0] M02_AXI_awvalid;
-  input bit [0 : 0] M02_AXI_awready;
-  output wire M02_AXI_wid;
-  output wire M02_AXI_wdata;
-  output wire M02_AXI_wstrb;
-  output wire [0 : 0] M02_AXI_wlast;
-  output wire M02_AXI_wuser;
-  output wire [0 : 0] M02_AXI_wvalid;
-  input bit [0 : 0] M02_AXI_wready;
-  input bit M02_AXI_bid;
+  output wire M02_AXI_awvalid;
+  input bit M02_AXI_awready;
+  output wire [31 : 0] M02_AXI_wdata;
+  output wire [3 : 0] M02_AXI_wstrb;
+  output wire M02_AXI_wvalid;
+  input bit M02_AXI_wready;
   input bit [1 : 0] M02_AXI_bresp;
-  input bit M02_AXI_buser;
-  input bit [0 : 0] M02_AXI_bvalid;
-  output wire [0 : 0] M02_AXI_bready;
-  output wire M02_AXI_arid;
-  output wire M02_AXI_araddr;
-  output wire M02_AXI_arlen;
-  output wire [2 : 0] M02_AXI_arsize;
-  output wire [1 : 0] M02_AXI_arburst;
-  output wire M02_AXI_arlock;
-  output wire [3 : 0] M02_AXI_arcache;
+  input bit M02_AXI_bvalid;
+  output wire M02_AXI_bready;
+  output wire [10 : 0] M02_AXI_araddr;
   output wire [2 : 0] M02_AXI_arprot;
-  output wire [3 : 0] M02_AXI_arregion;
-  output wire [3 : 0] M02_AXI_arqos;
-  output wire M02_AXI_aruser;
-  output wire [0 : 0] M02_AXI_arvalid;
-  input bit [0 : 0] M02_AXI_arready;
-  input bit M02_AXI_rid;
-  input bit M02_AXI_rdata;
+  output wire M02_AXI_arvalid;
+  input bit M02_AXI_arready;
+  input bit [31 : 0] M02_AXI_rdata;
   input bit [1 : 0] M02_AXI_rresp;
-  input bit [0 : 0] M02_AXI_rlast;
-  input bit M02_AXI_ruser;
-  input bit [0 : 0] M02_AXI_rvalid;
-  output wire [0 : 0] M02_AXI_rready;
+  input bit M02_AXI_rvalid;
+  output wire M02_AXI_rready;
+  output wire [8 : 0] M03_AXI_awaddr;
+  output wire [2 : 0] M03_AXI_awprot;
+  output wire M03_AXI_awvalid;
+  input bit M03_AXI_awready;
+  output wire [31 : 0] M03_AXI_wdata;
+  output wire [3 : 0] M03_AXI_wstrb;
+  output wire M03_AXI_wvalid;
+  input bit M03_AXI_wready;
+  input bit [1 : 0] M03_AXI_bresp;
+  input bit M03_AXI_bvalid;
+  output wire M03_AXI_bready;
+  output wire [8 : 0] M03_AXI_araddr;
+  output wire [2 : 0] M03_AXI_arprot;
+  output wire M03_AXI_arvalid;
+  input bit M03_AXI_arready;
+  input bit [31 : 0] M03_AXI_rdata;
+  input bit [1 : 0] M03_AXI_rresp;
+  input bit M03_AXI_rvalid;
+  output wire M03_AXI_rready;
 endmodule
 `endif

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1736879798" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/pfet_system_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1753114046" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/pfet_system_wrapper.dcp">
   <File Type="PA-TCL" Name="pfet_system_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="pfet_system_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="pfet_system_wrapper.vds"/>
@@ -42,6 +42,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/xilinx_vivado/Zybo-Z7-Master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

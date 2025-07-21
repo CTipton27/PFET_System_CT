@@ -247,9 +247,6 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=ON
 //Device Id
 DEVICE_ID:STRING=7z020
 
-//The directory containing a CMake configuration file for INTC.
-INTC_DIR:PATH=INTC_DIR-NOTFOUND
-
 //Number of slrs
 NUMBER_OF_SLRS:STRING=0x1
 
@@ -291,51 +288,6 @@ bsp_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 bsp_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp
-
-//Value Computed by CMake
-common_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/common/src
-
-//Value Computed by CMake
-common_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-common_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/common/src
-
-//Value Computed by CMake
-coresightps_dcc_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/coresightps_dcc/src
-
-//Value Computed by CMake
-coresightps_dcc_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-coresightps_dcc_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/coresightps_dcc/src
-
-//Value Computed by CMake
-devcfg_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/devcfg/src
-
-//Value Computed by CMake
-devcfg_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-devcfg_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/devcfg/src
-
-//Value Computed by CMake
-dmaps_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/dmaps/src
-
-//Value Computed by CMake
-dmaps_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-dmaps_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/dmaps/src
-
-//Value Computed by CMake
-emacps_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/emacps/src
-
-//Value Computed by CMake
-emacps_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-emacps_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/emacps/src
 
 //Value Computed by CMake
 freertos_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/freertos10_xilinx/src
@@ -400,7 +352,7 @@ freertos_stream_buffer:BOOL=OFF
 
 //Set to true to allocate memory statically, or false to allocate
 // memory dynamically.
-freertos_support_static_allocation:BOOL=true
+freertos_support_static_allocation:BOOL=ON
 
 //Number of RTOS ticks per sec
 freertos_tick_rate:STRING=100
@@ -510,97 +462,20 @@ freertos_use_timeslicing:BOOL=ON
 // tracing now.
 freertos_use_trace_facility:BOOL=ON
 
-//Value Computed by CMake
-gpio_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/gpio/src
+//No help, variable specified on the command line.
+proc_archiver:UNINITIALIZED=arm-none-eabi-gcc-ar.exe
 
-//Value Computed by CMake
-gpio_IS_TOP_LEVEL:STATIC=OFF
+//No help, variable specified on the command line.
+proc_assembler:UNINITIALIZED=arm-none-eabi-gcc
 
-//Value Computed by CMake
-gpio_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/gpio/src
+//No help, variable specified on the command line.
+proc_compiler:UNINITIALIZED=arm-none-eabi-gcc.exe
 
-//Value Computed by CMake
-gpiops_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/gpiops/src
+//No help, variable specified on the command line.
+proc_compiler_flags:UNINITIALIZED= -O2 -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard;-c
 
-//Value Computed by CMake
-gpiops_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-gpiops_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/gpiops/src
-
-//Value Computed by CMake
-libxil_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc
-
-//Value Computed by CMake
-libxil_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-libxil_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc
-
-//Archiver used to archive libraries for both BSP generation as
-// well as applications.
-proc_archiver:STRING=arm-none-eabi-gcc-ar.exe
-
-//Assembler used to assemble both BSP/libraries and applications.
-proc_assembler:STRING=arm-none-eabi-gcc
-
-//Compiler used to compile both BSP/libraries and applications.
-proc_compiler:STRING=arm-none-eabi-gcc.exe
-
-//Compiler Flags used in BSP and library generation.'-c'flag stands
-// for 'compile and assemble, but do not link'.Without this flag,
-// gcc tries to link the code, which will fail because there is
-// no application involved during libgen.'-O2' can be overwritten
-// by extra compile flags.
-proc_compiler_flags:STRING= -O2 -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard;-c
-
-//Extra Compiler Flags used in BSP and library generation
-proc_extra_compiler_flags:STRING= -g -Wall -Wextra -fno-tree-loop-distribute-patterns
-
-//Value Computed by CMake
-qspips_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/qspips/src
-
-//Value Computed by CMake
-qspips_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-qspips_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/qspips/src
-
-//Value Computed by CMake
-scugic_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/scugic/src
-
-//Value Computed by CMake
-scugic_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-scugic_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/scugic/src
-
-//Value Computed by CMake
-scutimer_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/scutimer/src
-
-//Value Computed by CMake
-scutimer_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-scutimer_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/scutimer/src
-
-//Value Computed by CMake
-scuwdt_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/scuwdt/src
-
-//Value Computed by CMake
-scuwdt_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-scuwdt_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/scuwdt/src
-
-//Value Computed by CMake
-sdps_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/sdps/src
-
-//Value Computed by CMake
-sdps_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-sdps_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/sdps/src
+//No help, variable specified on the command line.
+proc_extra_compiler_flags:UNINITIALIZED= -g -Wall -Wextra -fno-tree-loop-distribute-patterns
 
 //This option is not supported in the Unified Vitis IDE in this
 // version. Change to the classic IDE if you want to use this option
@@ -625,42 +500,6 @@ standalone_ttc_select_cntr:STRING=None
 //This option is not supported in the Unified Vitis IDE in this
 // version. Change to the classic IDE if you want to use this option.
 standalone_xpm_support:STRING=None
-
-//Value Computed by CMake
-ttcps_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/ttcps/src
-
-//Value Computed by CMake
-ttcps_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-ttcps_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/ttcps/src
-
-//Value Computed by CMake
-uartps_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/uartps/src
-
-//Value Computed by CMake
-uartps_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-uartps_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/uartps/src
-
-//Value Computed by CMake
-usbps_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/usbps/src
-
-//Value Computed by CMake
-usbps_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-usbps_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/usbps/src
-
-//Value Computed by CMake
-xadcps_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/xadcps/src
-
-//Value Computed by CMake
-xadcps_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-xadcps_SOURCE_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/xadcps/src
 
 //Value Computed by CMake
 xilstandalone_BINARY_DIR:STATIC=C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/pfet_freertos_platform/ps7_cortexa9_0/freertos_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src
@@ -790,7 +629,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

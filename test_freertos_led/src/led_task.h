@@ -33,13 +33,13 @@
 
 #define LED_TASK_STACK_SIZE 1024
 
-// static TaskHandle_t xLEDTask;
+static TaskHandle_t xLEDTaskHandle = NULL;
 static StaticTask_t xLEDTaskBuffer;
 static SemaphoreHandle_t xLEDTimerSemaphore;
 static TimerHandle_t xLEDTimer;
 
-extern XGpio led_device;
-extern XGpio_Config *led_gpio_cfg_ptr;
+extern XGpio xLEDDevice;
+extern XGpio_Config *xLEDGpioCfgPtr;
 
 // extern XGpioPs led_device;
 // extern XGpioPs_Config *led_gpio_cfg_ptr;
@@ -63,7 +63,7 @@ static StackType_t xLEDStack[LED_TASK_STACK_SIZE];
 // 	XGpio_DiscreteWrite(&led_device, LED_CHANNEL, 0);
 // }
 
-static void vLEDTimerCallback(TimerHandle_t pxTimer);
+static void LEDTimerCallback(TimerHandle_t pxTimer);
 
 void LEDGPIOInit();
 
@@ -71,7 +71,10 @@ void LEDTimerInit();
 
 static void LEDTask(void *pvParameters);
 
-void LEDTaskInit(u8 priority);
+TaskHandle_t LEDTaskInit(u8 priority);
 
+void LEDTaskStop(TaskHandle_t xLEDTaskHandle);
+
+void LEDTaskStart(TaskHandle_t xLEDTaskHandle);
 
 #endif // LED_TASK_H

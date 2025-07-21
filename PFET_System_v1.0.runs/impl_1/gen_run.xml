@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1736880064">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1753114114">
   <File Type="PA-TCL" Name="pfet_system_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="pfet_system_wrapper_reports.tcl"/>
   <File Type="INIT-TIMING" Name="pfet_system_wrapper_timing_summary_init.rpt"/>
@@ -117,6 +117,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/xilinx_vivado/Zybo-Z7-Master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

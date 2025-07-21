@@ -1,70 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="4104" HostCore="20" HostMemory="068369113088">
+    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="8808" HostCore="20" HostMemory="068369113088">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="16716" HostCore="20" HostMemory="068369113088">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="23680" HostCore="20" HostMemory="068369113088">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="12940" HostCore="20" HostMemory="068369113088">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="8760" HostCore="20" HostMemory="068369113088">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="30304" HostCore="20" HostMemory="068369113088">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="26900" HostCore="20" HostMemory="068369113088">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="31432" HostCore="20" HostMemory="068369113088">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="7316" HostCore="20" HostMemory="068369113088">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="736" HostCore="20" HostMemory="068369113088">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="34688" HostCore="20" HostMemory="068369113088">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="33912" HostCore="20" HostMemory="068369113088">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="37592" HostCore="20" HostMemory="068369113088">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="27576" HostCore="20" HostMemory="068369113088">
+    <Process Command="vivado.bat" Owner="ychna" Host="JUPITER" Pid="51196" HostCore="20" HostMemory="068369113088">
     </Process>
 </ProcessHandle>

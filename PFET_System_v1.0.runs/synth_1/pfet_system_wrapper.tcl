@@ -56,8 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 5
-set_param bd.open.in_stealth_mode 1
+set_param bd.open.in_stealth_mode 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -67,16 +66,18 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.cache/wt [current_project]
 set_property parent.project_path C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_FIFO XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {C:/Users/ychna/AppData/Roaming/Xilinx/Vivado/2024.2.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.1 [current_project]
+set_property ip_repo_paths c:/Users/ychna/xilinx_vivado/vivado-library-master [current_project]
+update_ip_catalog
 set_property ip_output_repo c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/hdl/pfet_system_wrapper.v
+read_verilog -library xil_defaultlib C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/hdl/pfet_system_wrapper.v
 add_files C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.srcs/sources_1/bd/pfet_system/pfet_system.bd
 set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_gpio_0_0/pfet_system_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_gpio_0_0/pfet_system_axi_gpio_0_0_ooc.xdc]
@@ -113,9 +114,64 @@ set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_
 set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_29/bd_7199_m00awn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_30/bd_7199_m00wn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_31/bd_7199_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_33/bd_7199_m01s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_34/bd_7199_m01arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_35/bd_7199_m01rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_36/bd_7199_m01awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_37/bd_7199_m01wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_38/bd_7199_m01bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_40/bd_7199_m02s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_41/bd_7199_m02arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_42/bd_7199_m02rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_43/bd_7199_m02awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_44/bd_7199_m02wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_45/bd_7199_m02bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_47/bd_7199_m03s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_48/bd_7199_m03arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_49/bd_7199_m03rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_50/bd_7199_m03awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_51/bd_7199_m03wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/bd_0/ip/ip_52/bd_7199_m03bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_smc_0/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_processing_system7_0_2/pfet_system_processing_system7_0_2.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_xadc_wiz_0_0/pfet_system_xadc_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_xadc_wiz_0_0/pfet_system_xadc_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axis_subset_converter_0_0/pfet_system_axis_subset_converter_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_intc_0_0/pfet_system_axi_intc_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_intc_0_0/pfet_system_axi_intc_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_intc_0_0/pfet_system_axi_intc_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_1/bd_f344_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_1/bd_f344_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_2/bd_f344_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_3/bd_f344_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_4/bd_f344_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_5/bd_f344_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_6/bd_f344_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_10/bd_f344_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_11/bd_f344_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_12/bd_f344_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_16/bd_f344_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_17/bd_f344_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_18/bd_f344_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_19/bd_f344_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_23/bd_f344_s02a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_24/bd_f344_sarn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_25/bd_f344_srn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_26/bd_f344_sawn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_27/bd_f344_swn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_28/bd_f344_sbn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_29/bd_f344_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_30/bd_f344_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_31/bd_f344_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_32/bd_f344_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_33/bd_f344_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/bd_0/ip/ip_34/bd_f344_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_smartconnect_0_0/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_dma_0_4/pfet_system_axi_dma_0_4.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_dma_0_4/pfet_system_axi_dma_0_4_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/ip/pfet_system_axi_dma_0_4/pfet_system_axi_dma_0_4_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/pfet_system_ooc.xdc]
 
 OPTRACE "Adding files" END { }

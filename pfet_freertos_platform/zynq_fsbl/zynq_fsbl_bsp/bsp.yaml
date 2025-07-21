@@ -151,10 +151,18 @@ include_folder: include
 lib_folder: lib
 libsrc_folder: libsrc
 drv_info:
+  axi_dma_0:
+    driver: axidma
+    ip_name: axi_dma
+    path: C:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\axidma_v9_19
   axi_gpio_led:
     driver: gpio
     ip_name: axi_gpio
     path: C:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\gpio_v4_12
+  axi_intc_0:
+    driver: intc
+    ip_name: axi_intc
+    path: C:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\intc_v3_19
   ps7_afi_0: None
   ps7_afi_1: None
   ps7_afi_2: None
@@ -225,6 +233,10 @@ drv_info:
     driver: xadcps
     ip_name: ps7_xadc
     path: C:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\xadcps_v2_7
+  xadc_wiz_0:
+    driver: sysmon
+    ip_name: xadc_wiz
+    path: C:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\sysmon_v7_10
 lib_info:
   xiltimer:
     path: C:\Xilinx\Vitis\2024.2\data\embeddedsw\lib\sw_services\xiltimer_v2_1

@@ -47,50 +47,43 @@ module bd_7199_wrapper
     M01_AXI_wstrb,
     M01_AXI_wvalid,
     M02_AXI_araddr,
-    M02_AXI_arburst,
-    M02_AXI_arcache,
-    M02_AXI_arid,
-    M02_AXI_arlen,
-    M02_AXI_arlock,
     M02_AXI_arprot,
-    M02_AXI_arqos,
     M02_AXI_arready,
-    M02_AXI_arregion,
-    M02_AXI_arsize,
-    M02_AXI_aruser,
     M02_AXI_arvalid,
     M02_AXI_awaddr,
-    M02_AXI_awburst,
-    M02_AXI_awcache,
-    M02_AXI_awid,
-    M02_AXI_awlen,
-    M02_AXI_awlock,
     M02_AXI_awprot,
-    M02_AXI_awqos,
     M02_AXI_awready,
-    M02_AXI_awregion,
-    M02_AXI_awsize,
-    M02_AXI_awuser,
     M02_AXI_awvalid,
-    M02_AXI_bid,
     M02_AXI_bready,
     M02_AXI_bresp,
-    M02_AXI_buser,
     M02_AXI_bvalid,
     M02_AXI_rdata,
-    M02_AXI_rid,
-    M02_AXI_rlast,
     M02_AXI_rready,
     M02_AXI_rresp,
-    M02_AXI_ruser,
     M02_AXI_rvalid,
     M02_AXI_wdata,
-    M02_AXI_wid,
-    M02_AXI_wlast,
     M02_AXI_wready,
     M02_AXI_wstrb,
-    M02_AXI_wuser,
     M02_AXI_wvalid,
+    M03_AXI_araddr,
+    M03_AXI_arprot,
+    M03_AXI_arready,
+    M03_AXI_arvalid,
+    M03_AXI_awaddr,
+    M03_AXI_awprot,
+    M03_AXI_awready,
+    M03_AXI_awvalid,
+    M03_AXI_bready,
+    M03_AXI_bresp,
+    M03_AXI_bvalid,
+    M03_AXI_rdata,
+    M03_AXI_rready,
+    M03_AXI_rresp,
+    M03_AXI_rvalid,
+    M03_AXI_wdata,
+    M03_AXI_wready,
+    M03_AXI_wstrb,
+    M03_AXI_wvalid,
     S00_AXI_araddr,
     S00_AXI_arburst,
     S00_AXI_arcache,
@@ -150,11 +143,11 @@ module bd_7199_wrapper
   input M00_AXI_wready;
   output [3:0]M00_AXI_wstrb;
   output M00_AXI_wvalid;
-  output [4:0]M01_AXI_araddr;
+  output [9:0]M01_AXI_araddr;
   output [2:0]M01_AXI_arprot;
   input M01_AXI_arready;
   output M01_AXI_arvalid;
-  output [4:0]M01_AXI_awaddr;
+  output [9:0]M01_AXI_awaddr;
   output [2:0]M01_AXI_awprot;
   input M01_AXI_awready;
   output M01_AXI_awvalid;
@@ -169,51 +162,44 @@ module bd_7199_wrapper
   input M01_AXI_wready;
   output [3:0]M01_AXI_wstrb;
   output M01_AXI_wvalid;
-  output M02_AXI_araddr;
-  output [1:0]M02_AXI_arburst;
-  output [3:0]M02_AXI_arcache;
-  output M02_AXI_arid;
-  output M02_AXI_arlen;
-  output M02_AXI_arlock;
+  output [10:0]M02_AXI_araddr;
   output [2:0]M02_AXI_arprot;
-  output [3:0]M02_AXI_arqos;
-  input [0:0]M02_AXI_arready;
-  output [3:0]M02_AXI_arregion;
-  output [2:0]M02_AXI_arsize;
-  output M02_AXI_aruser;
-  output [0:0]M02_AXI_arvalid;
-  output M02_AXI_awaddr;
-  output [1:0]M02_AXI_awburst;
-  output [3:0]M02_AXI_awcache;
-  output M02_AXI_awid;
-  output M02_AXI_awlen;
-  output M02_AXI_awlock;
+  input M02_AXI_arready;
+  output M02_AXI_arvalid;
+  output [10:0]M02_AXI_awaddr;
   output [2:0]M02_AXI_awprot;
-  output [3:0]M02_AXI_awqos;
-  input [0:0]M02_AXI_awready;
-  output [3:0]M02_AXI_awregion;
-  output [2:0]M02_AXI_awsize;
-  output M02_AXI_awuser;
-  output [0:0]M02_AXI_awvalid;
-  input M02_AXI_bid;
-  output [0:0]M02_AXI_bready;
+  input M02_AXI_awready;
+  output M02_AXI_awvalid;
+  output M02_AXI_bready;
   input [1:0]M02_AXI_bresp;
-  input M02_AXI_buser;
-  input [0:0]M02_AXI_bvalid;
-  input M02_AXI_rdata;
-  input M02_AXI_rid;
-  input [0:0]M02_AXI_rlast;
-  output [0:0]M02_AXI_rready;
+  input M02_AXI_bvalid;
+  input [31:0]M02_AXI_rdata;
+  output M02_AXI_rready;
   input [1:0]M02_AXI_rresp;
-  input M02_AXI_ruser;
-  input [0:0]M02_AXI_rvalid;
-  output M02_AXI_wdata;
-  output M02_AXI_wid;
-  output [0:0]M02_AXI_wlast;
-  input [0:0]M02_AXI_wready;
-  output M02_AXI_wstrb;
-  output M02_AXI_wuser;
-  output [0:0]M02_AXI_wvalid;
+  input M02_AXI_rvalid;
+  output [31:0]M02_AXI_wdata;
+  input M02_AXI_wready;
+  output [3:0]M02_AXI_wstrb;
+  output M02_AXI_wvalid;
+  output [8:0]M03_AXI_araddr;
+  output [2:0]M03_AXI_arprot;
+  input M03_AXI_arready;
+  output M03_AXI_arvalid;
+  output [8:0]M03_AXI_awaddr;
+  output [2:0]M03_AXI_awprot;
+  input M03_AXI_awready;
+  output M03_AXI_awvalid;
+  output M03_AXI_bready;
+  input [1:0]M03_AXI_bresp;
+  input M03_AXI_bvalid;
+  input [31:0]M03_AXI_rdata;
+  output M03_AXI_rready;
+  input [1:0]M03_AXI_rresp;
+  input M03_AXI_rvalid;
+  output [31:0]M03_AXI_wdata;
+  input M03_AXI_wready;
+  output [3:0]M03_AXI_wstrb;
+  output M03_AXI_wvalid;
   input [31:0]S00_AXI_araddr;
   input [1:0]S00_AXI_arburst;
   input [3:0]S00_AXI_arcache;
@@ -274,11 +260,11 @@ module bd_7199_wrapper
   wire M00_AXI_wready;
   wire [3:0]M00_AXI_wstrb;
   wire M00_AXI_wvalid;
-  wire [4:0]M01_AXI_araddr;
+  wire [9:0]M01_AXI_araddr;
   wire [2:0]M01_AXI_arprot;
   wire M01_AXI_arready;
   wire M01_AXI_arvalid;
-  wire [4:0]M01_AXI_awaddr;
+  wire [9:0]M01_AXI_awaddr;
   wire [2:0]M01_AXI_awprot;
   wire M01_AXI_awready;
   wire M01_AXI_awvalid;
@@ -293,51 +279,44 @@ module bd_7199_wrapper
   wire M01_AXI_wready;
   wire [3:0]M01_AXI_wstrb;
   wire M01_AXI_wvalid;
-  wire M02_AXI_araddr;
-  wire [1:0]M02_AXI_arburst;
-  wire [3:0]M02_AXI_arcache;
-  wire M02_AXI_arid;
-  wire M02_AXI_arlen;
-  wire M02_AXI_arlock;
+  wire [10:0]M02_AXI_araddr;
   wire [2:0]M02_AXI_arprot;
-  wire [3:0]M02_AXI_arqos;
-  wire [0:0]M02_AXI_arready;
-  wire [3:0]M02_AXI_arregion;
-  wire [2:0]M02_AXI_arsize;
-  wire M02_AXI_aruser;
-  wire [0:0]M02_AXI_arvalid;
-  wire M02_AXI_awaddr;
-  wire [1:0]M02_AXI_awburst;
-  wire [3:0]M02_AXI_awcache;
-  wire M02_AXI_awid;
-  wire M02_AXI_awlen;
-  wire M02_AXI_awlock;
+  wire M02_AXI_arready;
+  wire M02_AXI_arvalid;
+  wire [10:0]M02_AXI_awaddr;
   wire [2:0]M02_AXI_awprot;
-  wire [3:0]M02_AXI_awqos;
-  wire [0:0]M02_AXI_awready;
-  wire [3:0]M02_AXI_awregion;
-  wire [2:0]M02_AXI_awsize;
-  wire M02_AXI_awuser;
-  wire [0:0]M02_AXI_awvalid;
-  wire M02_AXI_bid;
-  wire [0:0]M02_AXI_bready;
+  wire M02_AXI_awready;
+  wire M02_AXI_awvalid;
+  wire M02_AXI_bready;
   wire [1:0]M02_AXI_bresp;
-  wire M02_AXI_buser;
-  wire [0:0]M02_AXI_bvalid;
-  wire M02_AXI_rdata;
-  wire M02_AXI_rid;
-  wire [0:0]M02_AXI_rlast;
-  wire [0:0]M02_AXI_rready;
+  wire M02_AXI_bvalid;
+  wire [31:0]M02_AXI_rdata;
+  wire M02_AXI_rready;
   wire [1:0]M02_AXI_rresp;
-  wire M02_AXI_ruser;
-  wire [0:0]M02_AXI_rvalid;
-  wire M02_AXI_wdata;
-  wire M02_AXI_wid;
-  wire [0:0]M02_AXI_wlast;
-  wire [0:0]M02_AXI_wready;
-  wire M02_AXI_wstrb;
-  wire M02_AXI_wuser;
-  wire [0:0]M02_AXI_wvalid;
+  wire M02_AXI_rvalid;
+  wire [31:0]M02_AXI_wdata;
+  wire M02_AXI_wready;
+  wire [3:0]M02_AXI_wstrb;
+  wire M02_AXI_wvalid;
+  wire [8:0]M03_AXI_araddr;
+  wire [2:0]M03_AXI_arprot;
+  wire M03_AXI_arready;
+  wire M03_AXI_arvalid;
+  wire [8:0]M03_AXI_awaddr;
+  wire [2:0]M03_AXI_awprot;
+  wire M03_AXI_awready;
+  wire M03_AXI_awvalid;
+  wire M03_AXI_bready;
+  wire [1:0]M03_AXI_bresp;
+  wire M03_AXI_bvalid;
+  wire [31:0]M03_AXI_rdata;
+  wire M03_AXI_rready;
+  wire [1:0]M03_AXI_rresp;
+  wire M03_AXI_rvalid;
+  wire [31:0]M03_AXI_wdata;
+  wire M03_AXI_wready;
+  wire [3:0]M03_AXI_wstrb;
+  wire M03_AXI_wvalid;
   wire [31:0]S00_AXI_araddr;
   wire [1:0]S00_AXI_arburst;
   wire [3:0]S00_AXI_arcache;
@@ -419,50 +398,43 @@ module bd_7199_wrapper
         .M01_AXI_wstrb(M01_AXI_wstrb),
         .M01_AXI_wvalid(M01_AXI_wvalid),
         .M02_AXI_araddr(M02_AXI_araddr),
-        .M02_AXI_arburst(M02_AXI_arburst),
-        .M02_AXI_arcache(M02_AXI_arcache),
-        .M02_AXI_arid(M02_AXI_arid),
-        .M02_AXI_arlen(M02_AXI_arlen),
-        .M02_AXI_arlock(M02_AXI_arlock),
         .M02_AXI_arprot(M02_AXI_arprot),
-        .M02_AXI_arqos(M02_AXI_arqos),
         .M02_AXI_arready(M02_AXI_arready),
-        .M02_AXI_arregion(M02_AXI_arregion),
-        .M02_AXI_arsize(M02_AXI_arsize),
-        .M02_AXI_aruser(M02_AXI_aruser),
         .M02_AXI_arvalid(M02_AXI_arvalid),
         .M02_AXI_awaddr(M02_AXI_awaddr),
-        .M02_AXI_awburst(M02_AXI_awburst),
-        .M02_AXI_awcache(M02_AXI_awcache),
-        .M02_AXI_awid(M02_AXI_awid),
-        .M02_AXI_awlen(M02_AXI_awlen),
-        .M02_AXI_awlock(M02_AXI_awlock),
         .M02_AXI_awprot(M02_AXI_awprot),
-        .M02_AXI_awqos(M02_AXI_awqos),
         .M02_AXI_awready(M02_AXI_awready),
-        .M02_AXI_awregion(M02_AXI_awregion),
-        .M02_AXI_awsize(M02_AXI_awsize),
-        .M02_AXI_awuser(M02_AXI_awuser),
         .M02_AXI_awvalid(M02_AXI_awvalid),
-        .M02_AXI_bid(M02_AXI_bid),
         .M02_AXI_bready(M02_AXI_bready),
         .M02_AXI_bresp(M02_AXI_bresp),
-        .M02_AXI_buser(M02_AXI_buser),
         .M02_AXI_bvalid(M02_AXI_bvalid),
         .M02_AXI_rdata(M02_AXI_rdata),
-        .M02_AXI_rid(M02_AXI_rid),
-        .M02_AXI_rlast(M02_AXI_rlast),
         .M02_AXI_rready(M02_AXI_rready),
         .M02_AXI_rresp(M02_AXI_rresp),
-        .M02_AXI_ruser(M02_AXI_ruser),
         .M02_AXI_rvalid(M02_AXI_rvalid),
         .M02_AXI_wdata(M02_AXI_wdata),
-        .M02_AXI_wid(M02_AXI_wid),
-        .M02_AXI_wlast(M02_AXI_wlast),
         .M02_AXI_wready(M02_AXI_wready),
         .M02_AXI_wstrb(M02_AXI_wstrb),
-        .M02_AXI_wuser(M02_AXI_wuser),
         .M02_AXI_wvalid(M02_AXI_wvalid),
+        .M03_AXI_araddr(M03_AXI_araddr),
+        .M03_AXI_arprot(M03_AXI_arprot),
+        .M03_AXI_arready(M03_AXI_arready),
+        .M03_AXI_arvalid(M03_AXI_arvalid),
+        .M03_AXI_awaddr(M03_AXI_awaddr),
+        .M03_AXI_awprot(M03_AXI_awprot),
+        .M03_AXI_awready(M03_AXI_awready),
+        .M03_AXI_awvalid(M03_AXI_awvalid),
+        .M03_AXI_bready(M03_AXI_bready),
+        .M03_AXI_bresp(M03_AXI_bresp),
+        .M03_AXI_bvalid(M03_AXI_bvalid),
+        .M03_AXI_rdata(M03_AXI_rdata),
+        .M03_AXI_rready(M03_AXI_rready),
+        .M03_AXI_rresp(M03_AXI_rresp),
+        .M03_AXI_rvalid(M03_AXI_rvalid),
+        .M03_AXI_wdata(M03_AXI_wdata),
+        .M03_AXI_wready(M03_AXI_wready),
+        .M03_AXI_wstrb(M03_AXI_wstrb),
+        .M03_AXI_wvalid(M03_AXI_wvalid),
         .S00_AXI_araddr(S00_AXI_araddr),
         .S00_AXI_arburst(S00_AXI_arburst),
         .S00_AXI_arcache(S00_AXI_arcache),

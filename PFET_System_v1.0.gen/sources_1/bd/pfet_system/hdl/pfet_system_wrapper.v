@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
-//Date        : Tue Jan 14 13:36:26 2025
+//Date        : Wed Jan 15 22:09:43 2025
 //Host        : Jupiter running 64-bit major release  (build 9200)
 //Command     : generate_target pfet_system_wrapper.bd
 //Design      : pfet_system_wrapper
@@ -32,6 +32,14 @@ module pfet_system_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    Vaux14_v_n,
+    Vaux14_v_p,
+    Vaux15_v_n,
+    Vaux15_v_p,
+    Vaux6_v_n,
+    Vaux6_v_p,
+    Vaux7_v_n,
+    Vaux7_v_p,
     leds_4bits_tri_o);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -54,6 +62,14 @@ module pfet_system_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  input Vaux14_v_n;
+  input Vaux14_v_p;
+  input Vaux15_v_n;
+  input Vaux15_v_p;
+  input Vaux6_v_n;
+  input Vaux6_v_p;
+  input Vaux7_v_n;
+  input Vaux7_v_p;
   output [3:0]leds_4bits_tri_o;
 
   wire [14:0]DDR_addr;
@@ -77,6 +93,14 @@ module pfet_system_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire Vaux14_v_n;
+  wire Vaux14_v_p;
+  wire Vaux15_v_n;
+  wire Vaux15_v_p;
+  wire Vaux6_v_n;
+  wire Vaux6_v_p;
+  wire Vaux7_v_n;
+  wire Vaux7_v_p;
   wire [3:0]leds_4bits_tri_o;
 
   pfet_system pfet_system_i
@@ -101,5 +125,13 @@ module pfet_system_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .Vaux14_v_n(Vaux14_v_n),
+        .Vaux14_v_p(Vaux14_v_p),
+        .Vaux15_v_n(Vaux15_v_n),
+        .Vaux15_v_p(Vaux15_v_p),
+        .Vaux6_v_n(Vaux6_v_n),
+        .Vaux6_v_p(Vaux6_v_p),
+        .Vaux7_v_n(Vaux7_v_n),
+        .Vaux7_v_p(Vaux7_v_p),
         .leds_4bits_tri_o(leds_4bits_tri_o));
 endmodule

@@ -56,8 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "pfet_system_processing_system7_0_2_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 5
-set_param bd.open.in_stealth_mode 1
+set_param bd.open.in_stealth_mode 2
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -69,11 +68,13 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.cache/wt [current_project]
 set_property parent.project_path C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_FIFO XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {C:/Users/ychna/AppData/Roaming/Xilinx/Vivado/2024.2.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.1 [current_project]
+set_property ip_repo_paths c:/Users/ychna/xilinx_vivado/vivado-library-master [current_project]
+update_ip_catalog
 set_property ip_output_repo c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }

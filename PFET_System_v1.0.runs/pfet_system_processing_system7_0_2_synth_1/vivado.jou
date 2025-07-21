@@ -3,8 +3,8 @@
 # SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
 # IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
 # SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
-# Start of session at: Mon Jan 13 22:10:09 2025
-# Process ID         : 12312
+# Start of session at: Wed Jan 15 22:15:30 2025
+# Process ID         : 23208
 # Current directory  : C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.runs/pfet_system_processing_system7_0_2_synth_1
 # Command line       : vivado.exe -log pfet_system_processing_system7_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pfet_system_processing_system7_0_2.tcl
 # Log file           : C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.runs/pfet_system_processing_system7_0_2_synth_1/pfet_system_processing_system7_0_2.vds
@@ -19,6 +19,6 @@
 # Host memory        : 68369 MB
 # Swap memory        : 10200 MB
 # Total Virtual      : 78569 MB
-# Available Virtual  : 51840 MB
+# Available Virtual  : 61904 MB
 #-----------------------------------------------------------
 source pfet_system_processing_system7_0_2.tcl -notrace

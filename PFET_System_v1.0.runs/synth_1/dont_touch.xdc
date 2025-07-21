@@ -18,4 +18,19 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pfet_system
 # IP: bd/pfet_system/ip/pfet_system_processing_system7_0_2/pfet_system_processing_system7_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pfet_system_processing_system7_0_2 || ORIG_REF_NAME==pfet_system_processing_system7_0_2} -quiet] -quiet
 
+# IP: bd/pfet_system/ip/pfet_system_xadc_wiz_0_0/pfet_system_xadc_wiz_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pfet_system_xadc_wiz_0_0 || ORIG_REF_NAME==pfet_system_xadc_wiz_0_0} -quiet] -quiet
+
+# IP: bd/pfet_system/ip/pfet_system_axis_subset_converter_0_0/pfet_system_axis_subset_converter_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pfet_system_axis_subset_converter_0_0 || ORIG_REF_NAME==pfet_system_axis_subset_converter_0_0} -quiet] -quiet
+
+# IP: bd/pfet_system/ip/pfet_system_axi_intc_0_0/pfet_system_axi_intc_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pfet_system_axi_intc_0_0 || ORIG_REF_NAME==pfet_system_axi_intc_0_0} -quiet] -quiet
+
+# IP: bd/pfet_system/ip/pfet_system_smartconnect_0_0/pfet_system_smartconnect_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pfet_system_smartconnect_0_0 || ORIG_REF_NAME==pfet_system_smartconnect_0_0} -quiet] -quiet
+
+# IP: bd/pfet_system/ip/pfet_system_axi_dma_0_4/pfet_system_axi_dma_0_4.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pfet_system_axi_dma_0_4 || ORIG_REF_NAME==pfet_system_axi_dma_0_4} -quiet] -quiet
+
 # XDC: c:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.gen/sources_1/bd/pfet_system/pfet_system_ooc.xdc

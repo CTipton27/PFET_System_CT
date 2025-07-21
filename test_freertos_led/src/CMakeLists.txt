@@ -9,7 +9,8 @@ project(${APP_NAME})
 
 find_package(common)
 enable_language(C ASM)
-collect(PROJECT_LIB_DEPS xilstandalone;xiltimer;freertos)
+collect(PROJECT_LIB_DEPS xilstandalone;xiltimer)
+
 
 
 

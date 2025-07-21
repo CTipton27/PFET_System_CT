@@ -27,7 +27,15 @@ module pfet_system (
   FIXED_IO_ddr_vrp,
   FIXED_IO_ps_srstb,
   FIXED_IO_ps_clk,
-  FIXED_IO_ps_porb
+  FIXED_IO_ps_porb,
+  Vaux6_v_n,
+  Vaux6_v_p,
+  Vaux7_v_n,
+  Vaux7_v_p,
+  Vaux14_v_n,
+  Vaux14_v_p,
+  Vaux15_v_n,
+  Vaux15_v_p
 );
 
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 leds_4bits TRI_O" *)
@@ -79,6 +87,26 @@ module pfet_system (
   inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *)
   inout FIXED_IO_ps_porb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux6 V_N" *)
+  (* X_INTERFACE_MODE = "slave Vaux6" *)
+  input Vaux6_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux6 V_P" *)
+  input Vaux6_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux7 V_N" *)
+  (* X_INTERFACE_MODE = "slave Vaux7" *)
+  input Vaux7_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux7 V_P" *)
+  input Vaux7_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux14 V_N" *)
+  (* X_INTERFACE_MODE = "slave Vaux14" *)
+  input Vaux14_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux14 V_P" *)
+  input Vaux14_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux15 V_N" *)
+  (* X_INTERFACE_MODE = "slave Vaux15" *)
+  input Vaux15_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux15 V_P" *)
+  input Vaux15_v_p;
 
   // stub module has no contents
 

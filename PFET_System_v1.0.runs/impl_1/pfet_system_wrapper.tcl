@@ -106,14 +106,14 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 5
-  set_param bd.open.in_stealth_mode 1
+  set_param bd.open.in_stealth_mode 2
   set_param runs.launchOptions { -jobs 20  }
   open_checkpoint pfet_system_wrapper_routed.dcp
   set_property webtalk.parent_dir C:/Users/ychna/xilinx_vivado/PFET_System_v1.0/PFET_System_v1.0.cache/wt [current_project]
 set_property TOP pfet_system_wrapper [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  set_property XPM_LIBRARIES {XPM_FIFO XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force -no_partial_mmi pfet_system_wrapper.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
